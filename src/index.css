@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.daily-card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1366px;
+  margin: auto;
+}
