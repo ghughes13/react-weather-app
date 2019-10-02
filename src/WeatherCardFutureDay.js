@@ -53,7 +53,7 @@ class WeatherCardFutureDay extends React.Component {
           <div className="dayCards">
             {dayCard}
           </div>
-          <ThreeHourForecast day={this.state.dayToShow} data={dayData}/>
+          <ThreeHourForecast day={this.state.dayToShow} data={dayData[this.state.dayToShow]}/>
       </div>
     );
   }
