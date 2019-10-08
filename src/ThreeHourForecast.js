@@ -25,16 +25,31 @@ class ThreeHourForecast extends React.Component {
         }
       }
 
-    componentDidMount() {
-        this.setState(prevState => {
-            let data = Object.assign({}, prevState.data);
-            return {data}
-        })
-        console.log('it was updated');
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log(prevProps, prevProps.day, this.props.prop);
+        if (prevProps.day !== this.props.day) {
+            this.setState({ data : { data: {
+                labels: this.props.data.map((item, index) => {
+                    return item.dt_txt.split(' ')[1];
+                }),
+                datasets: [
+                    {
+                        label: "videos Made",
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: this.props.data.map((item, index) => {
+                            return item.main.temp
+                        })
+                    }
+                ]
+                }}}
+            )
+        }
+        console.log('current state', this.state);
     }
 
     render() {   
-        console.log('re-rendering', this.props, this.state.data);
+        // console.log('re-rendering', this.props, this.state.data);
         let dataToUse = this.props.data;
         let hourlyForecast = dataToUse.map((item, index) => { 
                 return (

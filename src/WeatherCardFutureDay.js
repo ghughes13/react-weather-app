@@ -5,7 +5,8 @@ class WeatherCardFutureDay extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dayToShow : 0
+            dayToShow : 0,
+            dayData : []
         };
       }
 
@@ -37,6 +38,7 @@ class WeatherCardFutureDay extends React.Component {
             highs.push(dayHigh);
             lows.push(dayLow);           
         }
+
     
         let dayCard = days.map((day, index) => {
             return (
