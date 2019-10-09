@@ -1,6 +1,6 @@
 import React from 'react';
 
-class WeatherCardMain extends React.Component {
+class WeatherCardDaily extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,9 +20,4 @@ class WeatherCardMain extends React.Component {
   }
 }
 
-export default WeatherCardMain;
-  
-//Day
-//High
-//Low
-//Current Weather S
+export default WeatherCardDaily;
