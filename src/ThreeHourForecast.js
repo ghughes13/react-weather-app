@@ -5,7 +5,6 @@ class ThreeHourForecast extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // test : console.log("Here are the props: ", this.props.data[0]),
             day: this.props.dayToShow,
             data: {
                 test: 'test string',
@@ -14,7 +13,7 @@ class ThreeHourForecast extends React.Component {
                 }),
                 datasets: [
                     {
-                        label: "videos Made",
+                        label: "Temperature",
                         backgroundColor: 'rgb(255, 99, 132)',
                         borderColor: 'rgb(255, 99, 132)',
                         data: this.props.data.map((item, index) => {
@@ -33,12 +32,11 @@ class ThreeHourForecast extends React.Component {
             this.setState({ data : { data: {
                 test: 'new test string;',
                 labels: this.props.data.map((item, index) => {
-                    // console.log(item.dt_txt.split(' ')[1]);
                     return item.dt_txt.split(' ')[1];
                 }),
                 datasets: [
                     {
-                        label: "videos Made",
+                        label: "Temperature",
                         backgroundColor: 'rgb(255, 99, 132)',
                         borderColor: 'rgb(255, 99, 132)',
                         data: this.props.data.map((item, index) => {
@@ -50,11 +48,9 @@ class ThreeHourForecast extends React.Component {
             )
         }
         console.log(this.state.day)
-        // console.log('current state', this.state);
     }
 
     render() {   
-        // console.log('re-rendering', this.props, this.state.data);
         let dataToUse = this.props.data;
         let hourlyForecast = dataToUse.map((item, index) => { 
                 return (
@@ -65,7 +61,7 @@ class ThreeHourForecast extends React.Component {
         return (
             <div>
                 {hourlyForecast}
-                <div style={{position: "relative", width: 600, height: 550 }}>
+                <div style={{ margin: 'auto', position: "relative", width: 600, height: 550 }}>
                     <h3>Chart Samples</h3>
                     <Chart props={this.state.data} />
                 </div>

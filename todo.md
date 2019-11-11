@@ -1,5 +1,2 @@
-
-//Filter the data we need to daily cards
-//Display day cards
-//Filter data we need for hourly cards
-//
+//Convert military time to standard time
+//Change labels on chart
