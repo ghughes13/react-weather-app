@@ -25,6 +25,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <span className="date">{data.city.name}</span>
       <WeatherCardDay props={data}/>
       <WeatherCardFutureDay props={data}/>
     </div>

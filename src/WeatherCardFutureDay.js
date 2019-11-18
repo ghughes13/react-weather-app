@@ -44,8 +44,8 @@ class WeatherCardFutureDay extends React.Component {
             return (
                 <div key= {index} onClick={() => {this.setState({dayToShow : index})}}>
                     <h3>{day}</h3>
-                    <span>{lows[index]}, </span>
-                    <span>{highs[index]} </span>
+                    <span>High:     {Math.round(highs[index])}&#176; </span><br />
+                    <span>Low:     {Math.round(lows[index])}&#176; </span>
                 </div>
             )
         })
