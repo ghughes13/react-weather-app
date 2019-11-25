@@ -1,3 +1,7 @@
+* {
+  font-family: 'Montserrat';
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -20,4 +24,51 @@ code {
   margin: auto;
   cursor: pointer;
   margin-bottom:25px;
+}
+
+.App {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  min-height: 100vh;
+  padding-top: 25px;
+}
+
+.App-getting-zip {
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(184,184,184,.75);
+}
+
+.App-getting-zip h1 {
+  font-size: 80px;
+  color: white;
+  margin-top: 0;
+}
+
+.get-zip-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 600px;
+  margin: auto;
+  border: solid grey 1px;
+  border-radius: 5px;
+}
+
+.get-zip-input button {
+  margin-left: 5px;
+}
+
+.get-zip-input h2 {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.get-zip-input {
+  text-align: center;
+  background: #a8a8a8;
 }

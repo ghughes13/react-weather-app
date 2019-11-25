@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Line } from 'react-chartjs-2';
 
 export default function Chart(props) {
 
-  const [data, setData] = useState([]);
-    console.log(props)
   return (
     <div className="Chat">
       <Line 

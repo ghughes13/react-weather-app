@@ -1,7 +1,9 @@
 import React from 'react';
-import ThreeHourForecast from './ThreeHourForecast';
+import ThreeHourForecast from './TempChart';
+import CardCurrenyDay from './CardCurrentDay';
 
-class WeatherCardFutureDay extends React.Component {
+
+class DayCards extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,12 +40,13 @@ class WeatherCardFutureDay extends React.Component {
             highs.push(dayHigh);
             lows.push(dayLow);           
         }
-
     
         let dayCard = days.map((day, index) => {
+            let dt = new Date(day).getDay();
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
             return (
-                <div key= {index} onClick={() => {this.setState({dayToShow : index})}}>
-                    <h3>{day}</h3>
+                <div key={index} onClick={() => {this.setState({dayToShow : dt})}}>
+                    <h3>{days[dt]}</h3>
                     <span>High:     {Math.round(highs[index])}&#176; </span><br />
                     <span>Low:     {Math.round(lows[index])}&#176; </span>
                 </div>
@@ -52,6 +55,7 @@ class WeatherCardFutureDay extends React.Component {
 
     return (
       <div className="daily-card-container">
+          <CardCurrenyDay props={this.props}/>
           <div className="dayCards">
             {dayCard}
           </div>
@@ -61,9 +65,4 @@ class WeatherCardFutureDay extends React.Component {
   }
 }
 
-export default WeatherCardFutureDay;
-  
-//Day
-//High
-//Low
-//Current Weather
+export default DayCards;

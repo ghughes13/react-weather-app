@@ -11,11 +11,16 @@ class GetZip extends React.Component {
   render() {   
     return (
       <div>
-          <h1>Enter Your Zip Code</h1>
-          <input type="text"></input>
-          <button 
-            onClick={() => this.props.getZip(document.querySelector('input').value)}>Get Weather  
-          </button>
+          <h1>React Weather App</h1>
+          <div className="get-zip-input">
+            <h2>Enter Your Zip Code</h2>
+            <div>
+              <input type="text"></input>
+              <button 
+                onClick={() => this.props.getZip(document.querySelector('input').value)}>Get Weather  
+              </button>
+            </div>
+          </div>
       </div>
     );
   }
