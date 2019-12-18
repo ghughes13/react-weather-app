@@ -1,2 +1,3 @@
-//Convert military time to standard time
-//Change labels on chart
+-Change 0:00 to 12:00
+-Fix bug when clicking on 4th day
+-Add button to change city
