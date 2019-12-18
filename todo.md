@@ -1,3 +1,3 @@
--Change 0:00 to 12:00
--Fix bug when clicking on 4th day
--Add button to change city
+-Change 0:00 to 12:00<br />
+-Fix bug when clicking on 4th day<br />
+-Add button to change city<br />
