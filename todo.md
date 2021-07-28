@@ -1,2 +1,5 @@
-//Convert military time to standard time
-//Change labels on chart
+-Change 0:00 to 12:00<br />
+-Fix bug when clicking on 4th day<br />
+-Add button to change city<br />
+-Test app in all weather conditions<br />
+-Get new 'sunny' background<br />
